@@ -13,6 +13,8 @@ public class RockPaperScissorGameActivity extends AppCompatActivity {
     TextView playerChoice;
     TextView computerChoice;
     TextView winner;
+    TextView playerScore;
+    TextView computerScore;
     Game game;
 
     @Override
@@ -26,6 +28,8 @@ public class RockPaperScissorGameActivity extends AppCompatActivity {
         rock = findViewById(R.id.rock);
         paper = findViewById(R.id.paper);
         scissors = findViewById(R.id.scissors);
+        playerScore = findViewById(R.id.player_score);
+        computerScore = findViewById(R.id.computer_score);
         game = new Game();
     }
 
@@ -33,6 +37,8 @@ public class RockPaperScissorGameActivity extends AppCompatActivity {
         playerChoice.setText("Player chooses ROCK");
         winner.setText(game.play(Choice.ROCK));
         computerChoice.setText("Computer chooses " + game.result.toString());
+        playerScore.setText("Player wins: " + game.playerWins);
+        computerScore.setText("Computer wins: " + game.computerWins);
     }
 
 
@@ -40,24 +46,32 @@ public class RockPaperScissorGameActivity extends AppCompatActivity {
         playerChoice.setText("Player chooses PAPER");
         winner.setText(game.play(Choice.PAPER));
         computerChoice.setText("Computer chooses " + game.result.toString());
+        playerScore.setText("Player wins: " + game.playerWins);
+        computerScore.setText("Computer wins: " + game.computerWins);
     }
 
     public void onScissorsButtonClicked(View view){
         playerChoice.setText("Player chooses SCISSORS");
         winner.setText(game.play(Choice.SCISSORS));
         computerChoice.setText("Computer chooses " + game.result.toString());
+        playerScore.setText("Player wins: " + game.playerWins);
+        computerScore.setText("Computer wins: " + game.computerWins);
     }
 
     public void onLizardButtonClicked(View view){
         playerChoice.setText("Player chooses LIZARD");
         winner.setText(game.play(Choice.LIZARD).toString());
         computerChoice.setText("Computer chooses " + game.result.toString());
+        playerScore.setText("Player wins: " + game.playerWins);
+        computerScore.setText("Computer wins: " + game.computerWins);
     }
 
     public void onSpockButtonClicked(View view){
         playerChoice.setText("Player chooses SPOCK");
         winner.setText(game.play(Choice.SPOCK).toString());
         computerChoice.setText("Computer chooses " + game.result.toString());
+        playerScore.setText("Player wins: " + game.playerWins);
+        computerScore.setText("Computer wins: " + game.computerWins);
     }
 
 

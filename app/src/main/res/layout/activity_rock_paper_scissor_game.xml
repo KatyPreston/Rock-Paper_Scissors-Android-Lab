@@ -4,110 +4,129 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
     android:minWidth="100dp"
     tools:context=".RockPaperScissorGameActivity"
     tools:layout_editor_absoluteY="81dp">
 
     <TextView
         android:id="@+id/player_choice"
-        android:layout_width="341dp"
-        android:layout_height="56dp"
-        android:layout_marginBottom="28dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/computer_choice"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.518"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Spock" />
-
-    <TextView
-        android:id="@+id/winner"
-        android:layout_width="324dp"
-        android:layout_height="56dp"
-        android:layout_marginBottom="48dp"
+        android:layout_width="261dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="264dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/winner"
+        android:layout_width="258dp"
+        android:layout_height="41dp"
+        android:layout_marginBottom="160dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/rock"
-        android:layout_width="351dp"
-        android:layout_height="40dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="4dp"
+        android:layout_width="117dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="80dp"
+        android:background="@android:color/black"
         android:onClick="onRockButtonClicked"
         android:text="@string/rock"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.529"
+        android:textColor="@android:color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/paper"
-        android:layout_width="351dp"
-        android:layout_height="40dp"
+        android:layout_width="113dp"
+        android:layout_height="43dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="80dp"
+        android:background="@android:color/black"
         android:onClick="onPaperButtonClicked"
         android:text="@string/paper"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toStartOf="@+id/scissors"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toEndOf="@+id/rock"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/scissors"
+        android:layout_width="115dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginTop="80dp"
+        android:background="@android:color/black"
+        android:onClick="onScissorsButtonClicked"
+        android:text="@string/scissors"
+        android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Lizard"
+        android:layout_width="120dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="24dp"
+        android:background="@android:color/black"
+        android:onClick="onLizardButtonClicked"
+        android:text="@string/lizard"
+        android:textColor="@android:color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rock" />
 
     <Button
-        android:id="@+id/scissors"
-        android:layout_width="351dp"
-        android:layout_height="40dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:onClick="onScissorsButtonClicked"
-        android:text="@string/scissors"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Lizard" />
-
-    <Button
-        android:id="@+id/Lizard"
-        android:layout_width="351dp"
-        android:layout_height="40dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:onClick="onLizardButtonClicked"
-        android:text="@string/lizard"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/paper" />
-
-    <Button
         android:id="@+id/Spock"
-        android:layout_width="351dp"
-        android:layout_height="40dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="119dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginTop="24dp"
+        android:background="@android:color/black"
         android:onClick="onSpockButtonClicked"
         android:text="@string/spock"
+        android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scissors" />
 
     <TextView
         android:id="@+id/computer_choice"
-        android:layout_width="333dp"
-        android:layout_height="56dp"
-        android:layout_marginBottom="36dp"
+        android:layout_width="261dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="216dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/winner"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/computer_score"
+        android:layout_width="120dp"
+        android:layout_height="38dp"
+        android:layout_marginBottom="28dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/player_score"
+        android:layout_width="116dp"
+        android:layout_height="38dp"
+        android:layout_marginBottom="28dp"
+        android:layout_marginStart="88dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/computer_score" />
 </android.support.constraint.ConstraintLayout>

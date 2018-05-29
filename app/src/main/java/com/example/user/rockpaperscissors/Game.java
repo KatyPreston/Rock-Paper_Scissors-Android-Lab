@@ -38,46 +38,46 @@ public class Game {
         }
         else if(playerChoice == Choice.ROCK && computer == Choice.PAPER){
             this.computerWins += 1;
-            return "Computer wins " + this.computerWins;
+            return "Computer wins";
         }
         else if(playerChoice == Choice.ROCK && computer == Choice.SPOCK){
             this.computerWins += 1;
-            return "Computer wins " + this.computerWins;
+            return "Computer wins";
         }
         else if(playerChoice == Choice.PAPER && computer == Choice.SCISSORS){
             this.computerWins += 1;
-            return "Computer wins " + this.computerWins;
+            return "Computer wins";
         }
         else if(playerChoice == Choice.PAPER && computer == Choice.LIZARD){
             this.computerWins += 1;
-            return "Computer wins " + this.computerWins;
+            return "Computer wins";
         }
         else if(playerChoice == Choice.SCISSORS && computer == Choice.ROCK){
             this.computerWins += 1;
-            return "Computer wins " + this.computerWins;
+            return "Computer wins";
         }
         else if(playerChoice == Choice.SCISSORS && computer == Choice.SPOCK){
             this.computerWins += 1;
-            return "Computer wins " + this.computerWins;
+            return "Computer wins";
         }
         else if(playerChoice == Choice.LIZARD && computer == Choice.ROCK){
             this.computerWins += 1;
-            return "Computer wins " + this.computerWins;
+            return "Computer wins";
         }
         else if(playerChoice == Choice.LIZARD && computer == Choice.SCISSORS){
             this.computerWins += 1;
-            return "Computer wins " + this.computerWins;
+            return "Computer wins";
         }
         else if(playerChoice == Choice.SPOCK && computer == Choice.PAPER){
             this.computerWins += 1;
-            return "Computer wins " + this.computerWins;
+            return "Computer wins";
         }
         else if(playerChoice == Choice.SPOCK && computer == Choice.LIZARD){
             this.computerWins += 1;
-            return "Computer wins " + this.computerWins;
+            return "Computer wins";
         }
         else this.playerWins += 1;
-            return "Player wins " + this.playerWins;
+            return "Player wins";
     }
 
 
