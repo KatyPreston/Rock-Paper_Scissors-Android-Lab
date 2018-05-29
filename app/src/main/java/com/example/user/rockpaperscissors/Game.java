@@ -6,16 +6,23 @@ import java.util.Collections;
 public class Game {
     private ArrayList<Choice> computerChoice;
     Choice result;
+    int playerWins;
+    int computerWins;
 
     public Game(){
         this.computerChoice = new ArrayList<>();
         this.result = null;
+        this.playerWins = 0;
+        this.computerWins = 0;
+
     }
 
     public Choice randomComputerChoice(){
         computerChoice.add(Choice.ROCK);
         computerChoice.add(Choice.PAPER);
         computerChoice.add(Choice.SCISSORS);
+        computerChoice.add(Choice.LIZARD);
+        computerChoice.add(Choice.SPOCK);
 
         Collections.shuffle(computerChoice);
         Choice result = computerChoice.get(0);
@@ -30,14 +37,48 @@ public class Game {
             return "The players draw";
         }
         else if(playerChoice == Choice.ROCK && computer == Choice.PAPER){
-            return "Computer wins";
+            this.computerWins += 1;
+            return "Computer wins " + this.computerWins;
+        }
+        else if(playerChoice == Choice.ROCK && computer == Choice.SPOCK){
+            this.computerWins += 1;
+            return "Computer wins " + this.computerWins;
         }
         else if(playerChoice == Choice.PAPER && computer == Choice.SCISSORS){
-            return "Computer wins";
+            this.computerWins += 1;
+            return "Computer wins " + this.computerWins;
+        }
+        else if(playerChoice == Choice.PAPER && computer == Choice.LIZARD){
+            this.computerWins += 1;
+            return "Computer wins " + this.computerWins;
         }
         else if(playerChoice == Choice.SCISSORS && computer == Choice.ROCK){
-            return "Computer wins";
+            this.computerWins += 1;
+            return "Computer wins " + this.computerWins;
         }
-        else return "Player wins";
+        else if(playerChoice == Choice.SCISSORS && computer == Choice.SPOCK){
+            this.computerWins += 1;
+            return "Computer wins " + this.computerWins;
+        }
+        else if(playerChoice == Choice.LIZARD && computer == Choice.ROCK){
+            this.computerWins += 1;
+            return "Computer wins " + this.computerWins;
+        }
+        else if(playerChoice == Choice.LIZARD && computer == Choice.SCISSORS){
+            this.computerWins += 1;
+            return "Computer wins " + this.computerWins;
+        }
+        else if(playerChoice == Choice.SPOCK && computer == Choice.PAPER){
+            this.computerWins += 1;
+            return "Computer wins " + this.computerWins;
+        }
+        else if(playerChoice == Choice.SPOCK && computer == Choice.LIZARD){
+            this.computerWins += 1;
+            return "Computer wins " + this.computerWins;
+        }
+        else this.playerWins += 1;
+            return "Player wins " + this.playerWins;
     }
+
+
 }

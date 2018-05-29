@@ -13,6 +13,7 @@ public class RockPaperScissorGameActivity extends AppCompatActivity {
     TextView playerChoice;
     TextView computerChoice;
     TextView winner;
+    Game game;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,28 +26,38 @@ public class RockPaperScissorGameActivity extends AppCompatActivity {
         rock = findViewById(R.id.rock);
         paper = findViewById(R.id.paper);
         scissors = findViewById(R.id.scissors);
+        game = new Game();
     }
 
     public void onRockButtonClicked(View button){
-        Game game = new Game();
         playerChoice.setText("Player chooses Rock");
         winner.setText(game.play(Choice.ROCK));
-        computerChoice.setText(game.result.toString());
+        computerChoice.setText("Computer chooses " + game.result.toString());
     }
 
 
     public void onPaperButtonClicked(View button){
-        Game game = new Game();
         playerChoice.setText("Player chooses Paper");
         winner.setText(game.play(Choice.PAPER));
-        computerChoice.setText(game.result.toString());
+        computerChoice.setText("Computer chooses " + game.result.toString());
     }
 
     public void onScissorsButtonClicked(View button){
-        Game game = new Game();
         playerChoice.setText("Player chooses Scissors");
         winner.setText(game.play(Choice.SCISSORS));
-        computerChoice.setText(game.result.toString());
+        computerChoice.setText("Computer chooses " + game.result.toString());
+    }
+
+    public void onLizardButtonClicked(View button){
+        playerChoice.setText("Player chooses Lizard");
+        winner.setText(game.play(Choice.LIZARD).toString());
+        computerChoice.setText("Computer chooses " + game.result.toString());
+    }
+
+    public void onSpockButtonClicked(View button){
+        playerChoice.setText("Player chooses Spock");
+        winner.setText(game.play(Choice.SPOCK).toString());
+        computerChoice.setText("Computer chooses " + game.result.toString());
     }
 
 

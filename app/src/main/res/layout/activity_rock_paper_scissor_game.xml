@@ -62,4 +62,26 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/paper"
         tools:layout_editor_absoluteY="268dp" />
+
+    <Button
+        android:id="@+id/Lizard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="44dp"
+        android:onClick="onLizardButtonClicked"
+        android:text="@string/lizard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rock" />
+
+    <Button
+        android:id="@+id/Spock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="44dp"
+        android:onClick="onSpockButtonClicked"
+        android:text="@string/spock"
+        app:layout_constraintStart_toEndOf="@+id/Lizard"
+        app:layout_constraintTop_toBottomOf="@+id/scissors" />
 </android.support.constraint.ConstraintLayout>
