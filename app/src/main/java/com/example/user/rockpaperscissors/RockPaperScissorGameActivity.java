@@ -30,32 +30,32 @@ public class RockPaperScissorGameActivity extends AppCompatActivity {
     }
 
     public void onRockButtonClicked(View button){
-        playerChoice.setText("Player chooses Rock");
+        playerChoice.setText("Player chooses ROCK");
         winner.setText(game.play(Choice.ROCK));
         computerChoice.setText("Computer chooses " + game.result.toString());
     }
 
 
     public void onPaperButtonClicked(View button){
-        playerChoice.setText("Player chooses Paper");
+        playerChoice.setText("Player chooses PAPER");
         winner.setText(game.play(Choice.PAPER));
         computerChoice.setText("Computer chooses " + game.result.toString());
     }
 
     public void onScissorsButtonClicked(View button){
-        playerChoice.setText("Player chooses Scissors");
+        playerChoice.setText("Player chooses SCISSORS");
         winner.setText(game.play(Choice.SCISSORS));
         computerChoice.setText("Computer chooses " + game.result.toString());
     }
 
     public void onLizardButtonClicked(View button){
-        playerChoice.setText("Player chooses Lizard");
+        playerChoice.setText("Player chooses LIZARD");
         winner.setText(game.play(Choice.LIZARD).toString());
         computerChoice.setText("Computer chooses " + game.result.toString());
     }
 
     public void onSpockButtonClicked(View button){
-        playerChoice.setText("Player chooses Spock");
+        playerChoice.setText("Player chooses SPOCK");
         winner.setText(game.play(Choice.SPOCK).toString());
         computerChoice.setText("Computer chooses " + game.result.toString());
     }
